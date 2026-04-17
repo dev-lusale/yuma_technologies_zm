@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020617;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+
+    /* TRUE TRANSPARENT GLASS */
+    background: rgba(0, 0, 0, 0.15);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .nav-links a {
+    color: #0f172a;
+}
+
+.dark-mode .nav-links a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width:768px) {
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        flex-direction: column;
+
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+
+        width: 200px;
+        padding: 15px;
+
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.navbar {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.dark-mode .navbar {
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+
+.logo img {
+    width: 65px;
+    /* stretches logo horizontally */
+    height: auto;
+    /* keeps proportions correct */
+    border-radius: 20%;
+    /* rounded corners */
+    object-fit: contain;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #159A6D;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* HERO */
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+
+    /* Background Image with Transparent Overlay */
+    background:
+        linear-gradient(rgba(2, 6, 23, 0.75),
+            rgba(15, 23, 42, 0.75)),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+    padding: 60px 40px;
+
+    flex-wrap: wrap;
+}
+
+/* TEXT */
+.about-text {
+    max-width: 500px;
+    text-align: center;
+}
+
+/* ICON STYLE ABOUT IMAGE */
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 180px;
+    /* smaller = icon feel */
+    height: 180px;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.05);
+    /* soft glass effect */
+    backdrop-filter: blur(8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
+}
+
+/* hover effect */
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+
+
+.hero-content h1 {
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    letter-spacing: 0.5px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    padding: 12px 25px;
+    background: #159A6D;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+
+    display: inline-block;
+    margin-top: 10px;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #128a5f;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 700px;
+}
+
+/* SECTIONS */
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.services-container,
+.team-container,
+.blog-container,
+.testimonial-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.service-card,
+.team-card,
+.blog-card,
+.testimonial-card {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img,
+.team-card img,
+.blog-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* PROJECTS */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+
+    padding: 40px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #22d3ee;
+}
+
+.projects-container img {
+    width: 30px;
+}
+
+/* FILTER */
+
+.filter-buttons {
+    text-align: center;
+}
+
+.filter-buttons button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #159A6D;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* SUBSCRIBE */
+
+.subscribe {
+    background: #0f172a;
+    padding: 60px;
+    text-align: center;
+}
+
+.subscribe input {
+    padding: 12px;
+    width: 250px;
+}
+
+.subscribe button {
+    padding: 12px 20px;
+    background: #159A6D;
+    border: none;
+    color: white;
+}
+
+/* CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    /* stack heading above form */
+    align-items: center;
+    /* center heading + form */
+    padding: 60px 20px;
+    background: #020617;
+}
+
+.contact h2.section-title {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 15px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background: #159A6D;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #128a5f;
+    transform: translateY(-2px);
+}
+
+
+/* WHATSAPP */
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    border-radius: 50%;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+.whatsapp .icon {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp:active {
+    transform: scale(0.95);
+}
+
+.dark-mode .whatsapp {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* DARK MODE */
+
+.dark-mode {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.dark-mode .navbar {
+    background: #e2e8f0;
+}
+
+.dark-mode .nav-links a {
+    color: #0f172a;
+}
+
+.dark-mode .service-card,
+.dark-mode .team-card,
+.dark-mode .blog-card,
+.dark-mode .testimonial-card,
+.dark-mode .subscribe {
+    background: #cbd5e1;
+    color: #0f172a;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+}
+
+/* ICON BUTTON BASE STYLE */
+#darkModeToggle,
+.menu-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    /* light glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+
+    filter: invert(1);
+    /* makes icon visible on dark backgrounds */
+}
+
+.dark-mode .hero-content h1,
+.dark-mode .hero-content p {
+    color: #0f172a;
+    text-shadow: none;
+}
+
+#darkModeToggle:active,
+.menu-toggle:active {
+    transform: scale(0.95);
+}
+
+.dark-mode .icon {
+    filter: invert(0);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ensures horizontal centering */
+    gap: 20px;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    /* helps center text below the icon */
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    /* centers the image horizontally */
+    align-items: center;
+    /* centers vertically */
+    width: 100%;
+    /* makes sure it spans full width */
+}
+
+.about-image img {
+    width: 50px;
+    /* or 300px if you prefer larger */
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto;
+    /* forces image to center itself */
+}
+
+/* PROJECTS */
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ensures horizontal centering */
+    gap: 20px;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+    text-align: center;
+    /* helps center text below the icon */
+}
+
+.project-image {
+    display: flex;
+    justify-content: center;
+    /* centers the image horizontally */
+    align-items: center;
+    /* centers vertically */
+    width: 100%;
+    /* makes sure it spans full width */
+}
+
+.project-image img {
+    width: 50px;
+    /* or 300px if you prefer larger */
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto;
+    /* forces image to center itself */
+}
+
+
+
+.project-card {
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: 0.35s;
+}
+
+.project-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #22d3ee;
+
+}
+
+.project-card img {
+    width: auto;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.project-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-card p {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.project-card a {
+    color: #22d3ee;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    /* centers text horizontally */
+    padding: 20px;
+    background: #0f172a;
+    /* matches your dark theme */
+    color: grey;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
